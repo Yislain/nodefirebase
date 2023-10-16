@@ -7,7 +7,7 @@ const { mostrarUsuarios, nuevoUsuario, buscarPorId, modificarUsuario, borrarUsua
 // Configura Multer para la carga de archivos
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads/"); // Define la carpeta donde se guardarán los archivos subidos
+    cb(null, "./uploads");
   },
   filename: (req, file, cb) => {
     cb(null, file.originalname);
